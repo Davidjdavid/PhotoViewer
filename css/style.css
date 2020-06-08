@@ -1,0 +1,39 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+head {
+    background-color: #FFCFC4;
+    font: 20px Arial, "Roboto Thin";
+}
+
+body {
+    background-color: #FFEBE6;
+    font: 20px "Microsoft JhengHei UI";
+}
+
+.navBar {
+    background-color: #660000;
+    overflow: hidden;
+}
+
+.navBar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 24px 36px;
+    text-decoration: none;
+    font: 20px "Arial Black";
+}
+
+.navBar a:hover {
+    background-color: #800000;
+    color: white;
+}
+
+.navBar a.active {
+    background-color: white;
+    color: white;
+}
