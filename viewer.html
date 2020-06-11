@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Site</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div id="nav">
+        <script>
+            $(function () {
+                $("#nav").load("header.html");
+            });
+        </script>
+    </div>
+    <div class="modal">
+        <button type="button" class="leftButton" id="leftButton" onclick="document.getElementById('imageSource').src='images/art'+num+'.jpg'"><</button>
+        <img src="images/art1.jpg" id="imageSource">
+        <button type="button" class="rightButton" id="rightButton" onclick="document.getElementById('imageSource').src='images/art'+num+'.jpg'">></button>
+    </div>
+    <script>
+        let num = 1;
+        const leftBtn = document.getElementById("leftButton");
+        leftBtn.addEventListener('click', leftPicture);
+        function leftPicture() {
+            if(num<9) {
+                num++;
+            } else {
+                num = 1;
+            }
+        }
+        const rightBtn = document.getElementById("rightButton");
+        rightBtn.addEventListener('click', rightPicture);
+        function rightPicture() {
+            if(num>1) {
+                num--;
+            } else {
+                num = 9;
+            }
+        }
+    </script>
+</body>
+</html>
